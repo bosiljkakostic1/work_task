@@ -2,197 +2,224 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>Movie Slider</title>
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <style>
-        #slider {
-            position: relative;
-            width: 60%;
-            height: 210px;
-            left: 20%;
-            /*border: 1px solid red;*/
-            background-color: black;
-            overflow: hidden;
-        }
-        
-        #slider ul {
-            position: relative;
-            margin: 0;
-            padding: 0;
-            height: 210px;
-            list-style: none;
-            /*border: 1px solid black;*/
-        }
-        
-        ul {
-            left: 0;
-        }
-        
-        #slider li {
-            float: left;
-        }
-        /* Container needed to position the button. Adjust the width as needed */
-        
-        .container {
-            position: relative;
-            width: 100%;
-        }
-        /* Make the image responsive */
-        
-        img {
-            padding: 5px 5px;
-            border-radius: 25px;
-        }
-        /* Style the button and place it in the middle of the container/image */
-        
-        .container .btn {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            background-color: #555;
-            color: white;
-            font-size: 16px;
-            padding: 12px 24px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        
-        .btn {
-            opacity: 0;
-        }
-        
-        .container:hover .btn {
-            background-color: red;
-            color: white;
-            opacity: 1;
-        }
-        /* .container .btn:hover {
+  <meta charset="utf-8">
+  <title>Movie Slider</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <style>
+    #slider {
+      position: relative;
+      width: 60%;
+      height: 210px;
+      left: 20%;
+      /*border: 1px solid red;*/
+      background-color: black;
+      overflow: hidden;
+    }
+    
+    #slider ul {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      height: 210px;
+      list-style: none;
+      /*border: 1px solid black;*/
+    }
+    
+    ul {
+      left: 0;
+    }
+    
+    #slider li {
+      float: left;
+    }
+    /* Container needed to position the button. Adjust the width as needed */
+    
+    .container {
+      position: relative;
+      width: 100%;
+    }
+    /* Make the image responsive */
+    
+    img {
+      padding: 5px 5px;
+      border-radius: 25px;
+    }
+    /* Style the button and place it in the middle of the container/image */
+    
+    .container .btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: #555;
+      color: white;
+      font-size: 16px;
+      padding: 12px 24px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    
+    .btn {
+      opacity: 0;
+    }
+    
+    .container:hover .btn {
+      background-color: red;
+      color: white;
+      opacity: 1;
+    }
+    /* .container .btn:hover {
   background-color: black;
 } */
-    </style>
+  </style>
 
 </head>
 
 <body>
-    <div id="slider">
-        <ul>
-            <li>
-                <div class="container">
-                    <img src="./images/i1.jpg" alt="Image 1" width="200" height="200" />
-                    <button class="btn">Button</button>
-                </div>
-            </li>
-            <li>
-                <div class="container">
-                    <img src="./images/i2.jpg" alt="Image 1" width="200" height="200" />
-                    <button class="btn">Button</button>
-                </div>
-            </li>
-            <li>
-                <div class="container">
-                    <img src="./images/i3.jpg" alt="Image 1" width="200" height="200" />
-                    <button class="btn">Button</button>
-                </div>
-            </li>
-            <li>
-                <div class="container">
-                    <img src="./images/i4.jpg" alt="Image 1" width="200" height="200" />
-                    <button class="btn">Button</button>
-                </div>
-            </li>
-            <li>
-                <div class="container">
-                    <img src="./images/i5.jpg" alt="Image 1" width="200" height="200" />
-                    <button class="btn">Button</button>
-                </div>
-            </li>
-            <li>
-                <div class="container">
-                    <img src="./images/i6.jpg" alt="Image 1" width="200" height="200" />
-                    <button class="btn">Button</button>
-                </div>
-            </li>
-            <li>
-                <div class="container">
-                    <img src="./images/i7.jpg" alt="Image 1" width="200" height="200" />
-                    <button class="btn">Button</button>
-                </div>
-            </li>
-            <li>
-                <div class="container">
-                    <img src="./images/i8.jpg" alt="Image 1" width="200" height="200" />
-                    <button class="btn">Button</button>
-                </div>
-            </li>
-            <li>
-                <div class="container">
-                    <img src="./images/i9.jpg" alt="Image 1" width="200" height="200" />
-                    <button class="btn">Button</button>
-                </div>
-            </li>
-            <li>
-                <div class="container">
-                    <img src="./images/i10.jpg" alt="Image 1" width="200" height="200" />
-                    <button class="btn">Button</button>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <script>
-        $(document).ready(function() {
+  <div id="slider">
+    <ul>
+      <li>
+        <div class="container">
+          <img src="./images/i1.jpg" alt="Image 1" width="200" height="200" />
+          <button class="btn">Button</button>
+        </div>
+      </li>
+      <li>
+        <div class="container">
+          <img src="./images/i2.jpg" alt="Image 1" width="200" height="200" />
+          <button class="btn">Button</button>
+        </div>
+      </li>
+      <li>
+        <div class="container">
+          <img src="./images/i3.jpg" alt="Image 1" width="200" height="200" />
+          <button class="btn">Button</button>
+        </div>
+      </li>
+      <li>
+        <div class="container">
+          <img src="./images/i4.jpg" alt="Image 1" width="200" height="200" />
+          <button class="btn">Button</button>
+        </div>
+      </li>
+      <li>
+        <div class="container">
+          <img src="./images/i5.jpg" alt="Image 1" width="200" height="200" />
+          <button class="btn">Button</button>
+        </div>
+      </li>
+      <li>
+        <div class="container">
+          <img src="./images/i6.jpg" alt="Image 1" width="200" height="200" />
+          <button class="btn">Button</button>
+        </div>
+      </li>
+      <li>
+        <div class="container">
+          <img src="./images/i7.jpg" alt="Image 1" width="200" height="200" />
+          <button class="btn">Button</button>
+        </div>
+      </li>
+      <li>
+        <div class="container">
+          <img src="./images/i8.jpg" alt="Image 1" width="200" height="200" />
+          <button class="btn">Button</button>
+        </div>
+      </li>
+      <li>
+        <div class="container">
+          <img src="./images/i9.jpg" alt="Image 1" width="200" height="200" />
+          <button class="btn">Button</button>
+        </div>
+      </li>
+      <li>
+        <div class="container">
+          <img src="./images/i10.jpg" alt="Image 1" width="200" height="200" />
+          <button class="btn">Button</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <script>
+    $(document).ready(function() {
 
-            var ul = $('ul');
-            //li = ul.find('li');
-            ul_width = 0;
+      var ul = $('ul');
+      //li = ul.find('li');
+      ul_width = 0;
 
-            $(ul).children().each(function() {
-                ul_width = ul_width + $(this).width();
-            });
+      $(ul).children().each(function() {
+        ul_width = ul_width + $(this).width();
+      });
 
-            ul.css({
-                width: ul_width
-            });
-            var images_array = $("#slider ul li").map(function() {
-                return $(this).width();
-            }).get();
-            var i = 0;
-            anim(1500);
-
-            function anim(dur) {
-                ul.animate({
-                    left: -210
-                }, {
-                    duration: dur,
-                    easing: 'linear',
-                    complete: function() {
-                        //move the first item and put it as last item
-                        $('li:last').after($('li:first'));
-
-                        //set the default item to correct position
-                        ul.css({
-                            left: 0
-                        }, dur);
-                        anim(dur);
-                    }
-                });
-            }
-            ul.mouseenter(function() {
-                ul.stop(true, false);
-                anim(3000);
-            });
-            ul.mouseleave(function() {
-                ul.stop(true, false);
-                anim(1500);
-            });
-            // ul.click(function() {
-            //     ul.stop(true, false)
-            // });
+      ul.css({
+        width: ul_width
+      });
+      var images_array = $("#slider ul li").map(function() {
+        return $(this).width();
+      }).get();
+      var i = 0;
+      var opposite = false;
+      if (opposite) {
+        ul.css({
+          left: -210
         });
-    </script>
+      } else {
+        ul.css({
+          left: 0
+        });
+      }
+      anim(1500, opposite);
+
+      function anim(dur, opposite = false) {
+        var animation;
+        if (!opposite) {
+          animation = {
+            left: -210
+          };
+        } else {
+          animation = {
+            left: 0
+          };
+        }
+        ul.animate(animation, {
+          duration: dur,
+          easing: 'linear',
+          complete: function() {
+
+            if (!opposite) {
+              //move the first item and put it as last item
+              $('li:last').after($('li:first'));
+              //set the default item to correct position
+              ul.css({
+                left: 0
+              }, dur);
+            } else {
+              //move the last item and put it as first item
+              $('li:first').before($('li:last'));
+              //set the default item to correct position
+              ul.css({
+                left: -210
+              }, dur);
+            }
+            anim(dur, opposite);
+          }
+        });
+      }
+      ul.mouseenter(function() {
+        ul.stop(true, false);
+        anim(2000, opposite);
+      });
+      ul.mouseleave(function() {
+        ul.stop(true, false);
+        anim(1500, opposite);
+      });
+      // ul.click(function() {
+      //     ul.stop(true, false)
+      // });
+    });
+  </script>
 </body>
 
 </html>
