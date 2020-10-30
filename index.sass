@@ -1,0 +1,48 @@
+=transform($property)
+  -webkit-transform: $property
+  -ms-transform: $property
+  transform: $property
+.slider 
+  width: 60% 
+  position: relative 
+  height: auto 
+  left: 20% 
+  background-color: black 
+  overflow: hidden 
+  ul 
+    position: relative 
+    margin: 0 
+    padding: 0 
+    height: auto 
+li 
+  display: inline-block 
+ul 
+  white-space: nowrap 
+.container 
+  position: relative 
+  width: 100% 
+  &:hover 
+    .btn 
+      background-color: red 
+      color: white 
+      opacity: 1 
+img 
+  padding: 5px 
+  border-radius: 5% 
+  max-width: 100% 
+  height: auto 
+.btn 
+  position: absolute 
+  top: 50% 
+  left: 50% 
+  background-color: #555 
+  color: white 
+  font-size: 1rem 
+  padding: 2px 4px 
+  border: none 
+  cursor: pointer 
+  border-radius: 5px 
+  width: 50% 
+  height: auto 
+  opacity: 0
+  +transform(translate(-50%, -50%))
