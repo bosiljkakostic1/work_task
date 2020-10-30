@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Slider</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <link rel="stylesheet" href="./index.css">
+
+</head>
+
+<body>
+<!--
+      data-dir location where images reside
+      data-extension extension of image files
+      data-filenames filenames without extension and location separated by comma (without blank)
+      data-slider-rows number of rows
+      data-img-in-row number of images in every row
+      data-opposites direction off moving images, true or false separated by comma (without blank)
+      data-faster data-slower speed in milliseconds for the duration of image moving (slower when the cursor is over a row)
+-->
+
+  <div id="slider_param" data-dir="./images/" data-extension="jpg" data-filenames="i1,i2,i3,i4,i5,i6,i7,i8,i9,i10"
+  data-slider-rows=3 data-img-in-row=5 data-opposites="false,true,true" data-faster="1500,2000,2500"
+  data-slower="2000,3000,4000">
+  </div>
+  <script src="./index.js"></script>
+</body>
+
+</html>

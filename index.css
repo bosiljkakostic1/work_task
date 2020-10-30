@@ -1,0 +1,65 @@
+.slider {
+  width: 60%;
+  position: relative;
+  height: auto;
+  left: 20%;
+  background-color: black;
+  overflow: hidden;
+}
+
+.slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  /*list-style: none;*/
+}
+
+li {
+  display: inline-block;
+}
+
+ul {
+  white-space: nowrap;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+/* Make the image responsive */
+
+img {
+  padding: 5px;
+  border-radius: 5%;
+  max-width: 100%;
+  height: auto
+}
+/* Style the button and place it in the middle of the container/image */
+
+.btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 1rem;
+  padding: 2px 4px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 50%;
+  height: auto
+}
+
+.btn {
+  opacity: 0;
+}
+
+.container:hover .btn {
+  background-color: red;
+  color: white;
+  opacity: 1;
+}
