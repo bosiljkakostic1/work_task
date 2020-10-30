@@ -1,2 +1,3 @@
 https://api.jquery.com/animate/
 https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API
+https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes
